@@ -1,0 +1,15 @@
+<h1>Articles#show</h1>
+<p>Find me in app/views/articles/show.html.erb</p>
+
+<h1> <%= @article.title %> </h1>
+<h2> <%= @article.content %> </h2>
+<h2> <%= @article.created_at %> </h2>
+<h2> <%= @article.updated_at %> </h2>
+
+<%= link_to "home", articles_path %>
+
+<%= link_to "edit article", edit_article_path(@article) %>
+  <%= link_to "Delete", article_path(@article), #autoextracts the id
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
+
